@@ -40,6 +40,10 @@ public class Problema1 {
 			if(j<q-p && j>=0){
 				x[p+j]=a[p+i];
 			}
+			else{
+				j=(i+m)%(q-p);
+				x[p+j]=a[p+i];
+			}
 		}
 		return a;
 	}
