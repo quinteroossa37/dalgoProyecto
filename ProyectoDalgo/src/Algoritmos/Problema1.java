@@ -30,12 +30,13 @@ public class Problema1 {
 
 	public int[] re(int[] a, int p, int q){
 		int j,m;
+		m = (q-p)-(1%(q-p));
 		int[] x = new int[a.length];
 		for(int i=0;i<a.length;i++){
 			x[i]=a[i];
 		}
 		for(int i=0;i<(q-p);i++){
-			j=-i-1%(q-p);
+			j=-i+m;
 			if(j<q-p && j>=0){
 				x[p+j]=a[p+i];
 			}
